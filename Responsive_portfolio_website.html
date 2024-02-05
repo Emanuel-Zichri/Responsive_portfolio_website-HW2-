@@ -1,0 +1,127 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="Responsive_portfolio_website_Styles.CSS" />
+  <!--BOX ICONS-->
+  <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+
+  <title>Emanuel Zichri Responsive portfolio website</title>
+
+  <!--REMIXICONS-->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.css"
+  />
+  <!--CSS-->
+  <link rel="stylesheet" href="Responsive_portfolio_website.CSS" />
+</head>
+
+<body>
+  <header class="header-1">
+    <nav class="nav bd-grid">
+      <div>
+        <a href="#" class="nav__logo">Emanuel</a>
+      </div>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#home" class="nav__link active">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="about.html" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="skills.html" class="nav__link">Skills and Resume</a>
+          </li>
+          <li class="nav__item">
+            <a href="projects.html" class="nav__link">Projects</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="ri-menu-line"></i>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-1">
+    <section class="home bd-grid" id="home">
+      <div class="home__data">
+        <h1 class="home__title">
+          Hi, <br />I'm <span class="home__title-color">Emanuel</span
+          ><br />Industrial engineering <br />
+          and management student
+        </h1>
+        <a href="#contact" class="button">Contact</a>
+        <a
+          href="CV - Emanuel_Zichri.pdf"
+          class="button"
+          download="CV - Emanuel_Zichri.pdf"
+          >Download CV</a
+        >
+      </div>
+      <div class="home__social">
+        <a
+          href="https://www.linkedin.com/in/emanuel-zichri"
+          class=""
+          home__social-icon
+          ><i class="ri-linkedin-fill"></i
+        ></a>
+        <a href="https://github.com/Emanuel-Zichri" class="" home__social-icon
+          ><i class="ri-github-fill"></i
+        ></a>
+        <a href="#" class="" home__social-icon></a>
+      </div>
+
+      <div class="home__img">
+        <img src="Clipped_image_20240131_111627.png" alt="" />
+      </div>
+    </section>
+
+    <!--contact-->
+    <section class="contact section" id="contact">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact__container bd-grid">
+        <form action="" class="contact-form" id="contact-form">
+          <input type="text" placeholder="Name" class="contact__input" />
+          <input type="mail" placeholder="Email" class="contact__input" />
+          <textarea
+            name=""
+            id="contact-message"
+            cols="0"
+            rows="10"
+            placeholder="Message"
+            class="contact__input"
+          ></textarea>
+          <input type="button" value="Send" class="contact__button button" />
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="footer__title">Emanuel</p>
+    <div class="footer__social">
+      <a
+        href="https://www.facebook.com/gnbutkzfrh?mibextid=ZbWKwL"
+        class="footer__icon"
+        ><i class="ri-facebook-line"></i
+      ></a>
+      <a href="https://www.linkedin.com/in/emanuel-zichri" class="footer__icon"
+        ><i class="ri-linkedin-line"></i
+      ></a>
+      <a href="#" class="footer__icon"><i class="ri-twitter-x-line"></i></a>
+    </div>
+    <p></p>
+  </footer>
+  <!--SCROLL REVAEAL-->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <!--MAIN JS-->
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="contact.js"></script>
+</body>
