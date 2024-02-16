@@ -1,8 +1,8 @@
 const contactForm = document.getElementById("contact-form");
-contactMessage = document.getElementById("contact-message");
+const contactMessage = document.getElementById("confirmation-message");
 
 const sendEmail = (e) => {
-  e.preventDefult();
+  e.preventDefault();
   emailjs
     .sendForm(
       "service_9oj1ykg",
@@ -11,10 +11,33 @@ const sendEmail = (e) => {
       "Xh_A0vAQGUxZbt_GD"
     )
     .then(() => {
-      contactMessage.textContact = "Message sent successfuly";
+      contactMessage.textContent = "Message sent successfully";
       setTimeout(() => {
-        contactMessage.textContact = "";
+        contactMessage.textContent = "";
       }, 5000);
+    })
+    .catch((error) => {
+      console.error("Error sending email:", error);
+      contactMessage.textContent =
+        "Error sending message. Please try again later.";
     });
 };
+
 contactForm.addEventListener("submit", sendEmail);
+
+document
+  .querySelector(".contact__button")
+  .addEventListener("click", function () {
+    var name = document.querySelector('.contact__input[type="text"]').value;
+    var email = document.querySelector('.contact__input[type="email"]').value;
+    var message = document.querySelector(
+      '.contact__input[type="textarea"]'
+    ).value;
+
+    if (name.trim() !== "" && email.trim() !== "" && message.trim() !== "") {
+      contactMessage.textContent = "Message sent successfully";
+      contactForm.reset();
+    } else {
+      contactMessage.textContent = "Please fill in all fields.";
+    }
+  });
